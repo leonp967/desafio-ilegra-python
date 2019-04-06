@@ -74,7 +74,7 @@ def process_file(path):
             elif attributes[0] == '002':
                 customer = Customer.from_list(attributes[1:])
                 customer_list.append(customer)
-            else:
+            elif attributes[0] == '003':
                 process_sales(attributes[1:])
 
     generate_results(path)
